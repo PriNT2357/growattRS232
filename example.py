@@ -6,11 +6,11 @@ from growattRS232 import GrowattRS232
 
 # defaults
 # USB port of RS232 converter
-DEFAULT_PORT = "/dev/ttyUSB0"
+DEFAULT_PORT = "COM3"
 # Growatt modbus address
 DEFAULT_ADDRESS = 0x1
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG, filename='debug_log.log', filemode='w')
 
 
 async def main():

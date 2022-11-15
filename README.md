@@ -5,6 +5,9 @@
 
 Python wrapper for getting data asynchronously from Growatt inverters via serial usb RS232 connection and modbus RTU protocol.
 
+Note that pymodbus must be version 2.5.3
+py -m pip install pymodbus==2.5.3
+
 The Growatt inverted must support the modbus protocol (some older inverters only support proprietary serial communication)
 Connect the RS232 DB9 usb adapter to the RS232 port on the underside of the inverter (you might have to remove a cover plate).
 
