@@ -426,7 +426,7 @@ class GrowattRS232:
         data[ATTR_BAT_DSP_V] = rssf(rir1, REG_BAT_DSP_V, 100)
         data[ATTR_BAT_OVERCHARGE] = rssf(rir2, REG_BAT_OVERCHARGE)
         data[ATTR_BAT_S_V] = rssf(rir1, REG_BAT_S_V, 100)
-        data[ATTR_BAT_SOC] = rir2.registers[REG_BAT_SOC]
+        data[ATTR_BAT_SOC] = 100 - rir2.registers[REG_BAT_SOC] # ex: 95% SOC comes back as 5
         data[ATTR_BAT_V] = rssf(rir1, REG_BAT_V, 100)
         data[ATTR_BAT_WATT_H] = rssf(rir2, REG_BAT_WATT_H)
         data[ATTR_BAT_WATT_L] = rssf(rir2, REG_BAT_WATT_L)
